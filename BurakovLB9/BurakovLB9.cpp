@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #define MAX1 10
 #define MAX2 10
 #include <string>
@@ -99,9 +99,9 @@ public:
     }
 
     void qcahge(int i, Patient* data) {
-        if (rpos == spos && pass) std::cout << "The queue is empty\n";
+        if (rpos == spos && !pass) std::cout << "The queue is empty\n";
         if (!pass) {
-            if (i - rpos < 1 || i >= spos - rpos) std::cout << "Invalid index\n";
+            if (i < 1 || i >= spos - rpos) std::cout << "Invalid index\n";
             else array[i + rpos - 1] = data;
         }
         else {
